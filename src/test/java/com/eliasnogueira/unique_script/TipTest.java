@@ -25,7 +25,7 @@ public class TipTest {
 	
 	@After
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 	
 	@Test
