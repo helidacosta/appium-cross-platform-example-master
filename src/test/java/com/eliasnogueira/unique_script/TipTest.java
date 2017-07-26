@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.eliasnogueira.po.MainScreenPageObject;
+import com.eliasnogueira.po.SettingsScreenPageObject;
 import com.eliasnogueira.support.Utils;
 
 import io.appium.java_client.AppiumDriver;
@@ -30,14 +31,15 @@ public class TipTest {
 	@Test
 	public void testCalculateDefaultTip() {
 		MainScreenPageObject mainScreen = new MainScreenPageObject(driver);
+		SettingsScreenPageObject settingsScreen = new SettingsScreenPageObject(driver);
 		
 		//click menu settings
 		mainScreen.clickMenuSettings();
 		
 		//altera a porcentagem
-		mainScreen.clearPercentage();
-		mainScreen.fillTipPercentage("20");
-		mainScreen.clickSettingsButton();
+		settingsScreen.clearPercentage();
+		settingsScreen.fillTipPercentage("20");
+		settingsScreen.clickSettingsButton();
 		
 		//calcula a porcentagem
 		mainScreen.fillBillAmount("100");

@@ -27,20 +27,10 @@ public class MainScreenPageObject {
 	@AndroidFindBy(id = "org.traeg.fastip:id/tipPctTextView")
 	MobileElement tipPercentage;
 	
-	@AndroidFindBy(id = "org.traeg.fastip:id/tipPercentageEditText")
-	//@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
-	@FindBy(id = "fillPerc")
-	MobileElement fillPercentage;
-	
 	@AndroidFindBy(id = "org.traeg.fastip:id/menu_settings")
 	//@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
 	@FindBy(id = "menuSet")
 	MobileElement menuSettings;
-	
-	@AndroidFindBy(id = "org.traeg.fastip:id/saveSettingsButton")
-	//@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
-	@FindBy(id = "setButton")
-	MobileElement settingsButton;
 	
 	@AndroidFindBy(id = "org.traeg.fastip:id/tipAmtTextView")
 	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[2]")
@@ -69,24 +59,9 @@ public class MainScreenPageObject {
 	public void clickMenuSettings() {
 		menuSettings.click();
 	}
-	
+			
 	public void clickCalculateTip() {
 		calculateTip.click();
-	}
-	
-	public void clickSettingsButton() {
-		settingsButton.click();
-	}
-	public void fillTipPercentage(String percentage) {
-		fillPercentage.sendKeys(percentage);
-	}
-	
-	public String getfillPercentage() {
-		return fillPercentage.getText();
-	}	
-	
-	public void clearPercentage() {
-		fillPercentage.clear();
 	}
 	
 	public String getTipPercentage() {
