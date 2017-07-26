@@ -1,4 +1,4 @@
-package com.eliasnogueira.po;
+package com.tcc.helidacosta.po;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

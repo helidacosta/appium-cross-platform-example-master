@@ -1,4 +1,4 @@
-package com.eliasnogueira.basic;
+package com.tcc.helidacosta.basic;
 
 import static org.junit.Assert.assertEquals;
 
@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import com.eliasnogueira.po.MainScreenPageObject;
+import com.tcc.helidacosta.po.MainScreenPageObject;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;

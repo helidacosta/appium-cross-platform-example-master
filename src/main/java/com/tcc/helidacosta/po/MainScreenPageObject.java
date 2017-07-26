@@ -1,4 +1,4 @@
-package com.eliasnogueira.po;
+package com.tcc.helidacosta.po;
 
 import java.util.concurrent.TimeUnit;
 
