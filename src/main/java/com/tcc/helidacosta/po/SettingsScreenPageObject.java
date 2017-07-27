@@ -1,22 +1,22 @@
 package com.tcc.helidacosta.po;
 
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.pagefactory.iOSFindBy;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class SettingsScreenPageObject {
 
 	@AndroidFindBy(id = "org.traeg.fastip:id/tipPercentageEditText")
-	//@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
+	@iOSFindBy(xpath = "//XCUIElementTypeApplication[@name=\"FasTip\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField")
 	@FindBy(id = "fillPerc")
 	MobileElement fillPercentage;
 	
 	@AndroidFindBy(id = "org.traeg.fastip:id/saveSettingsButton")
-	//@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
+	@iOSFindBy(accessibility = "Done")
 	@FindBy(id = "setButton")
 	MobileElement settingsButton;
 	

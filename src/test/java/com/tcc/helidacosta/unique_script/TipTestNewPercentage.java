@@ -30,16 +30,20 @@ private AppiumDriver<?> driver;
 	@Test
 	public void testCalculateDefaultTip() {
 		MainScreenPageObject mainScreen = new MainScreenPageObject(driver);
-		SettingsScreenPageObject settingsScreen = new SettingsScreenPageObject(driver);
 		
 		//click menu settings
 		mainScreen.clickMenuSettings();
-		
+
+		// instancia o page object da tela de configurações
+		SettingsScreenPageObject settingsScreen = new SettingsScreenPageObject(driver);
+
 		//altera a porcentagem
 		settingsScreen.clearPercentage();
 		settingsScreen.fillTipPercentage("20");
 		settingsScreen.clickSettingsButton();
-		
+
+		// volta a instanciar o page object da tela principal, para que seja possível localizar os componentes
+        mainScreen = new MainScreenPageObject(driver);
 		//calcula a porcentagem
 		mainScreen.fillBillAmount("179.83");
 		mainScreen.clickCalculateTip();
